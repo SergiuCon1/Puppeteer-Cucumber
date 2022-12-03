@@ -1,23 +1,22 @@
 Feature: Booking tickets
     Scenario: Booking one ticket - positive case
         Given user is on "http://qamid.tmweb.ru/client/index.php" page
-        When user clicks on the button "dayOfWeek"
-        When user clicks on the button "timeMovie"
-        When user clicks on the button "freeSlots"
-        When user clicks on the button "acceptButton"
-        When user clicks on the button "acceptButton"
-        Then user gets "QR code"
+        When user clicks day of week 2
+        When user clicks on the movie with id "129"
+        When user clicks on a free slots 1
+        When user clicks acception button
+        And user clicks acception button
+        Then user gets QR code
     Scenario: Booking several tickets - positive case
         Given user is on "http://qamid.tmweb.ru/client/index.php" page
-        When user clicks on the button "dayOfWeek"
-        When user clicks on the button "timeMovie"
-        When user clicks on the button "severalFreeSlots"
-        When user clicks on the button "acceptButton"
-        When user clicks on the button "acceptButton"
-        Then user gets "QR code"
+        When user clicks day of week 2
+        When user clicks on the movie with id "129"
+        When user clicks on a free slots 5
+        When user clicks acception button
+        And user clicks acception button
+        Then user gets QR code
     Scenario: Booking several tickets - positive case
         Given user is on "http://qamid.tmweb.ru/client/index.php" page
-        When user clicks on the button "dayOfWeek"
-        When user clicks on the button "timeMovie"
-        When user clicks on the button "acceptButton"
-        Then user gets "disabledButton"
+        When user clicks day of week 2
+        When user clicks on the movie with id "129"
+        Then user gets disabled button

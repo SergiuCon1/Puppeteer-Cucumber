@@ -24,8 +24,7 @@ describe("Verify booking of the tickets", () => {
     await clickElement(page, "[class='acceptin-button']");
     await clickElement(page, "[class='acceptin-button']");
     const expectedQRCode = await page.$eval("img", n => n.getAttribute("src"));
-    const expectedCost = await getText(page, )
-    expect(expected).toEqual("i/QR_code.png");
+    expect(expectedQRCode).toEqual("i/QR_code.png");
 
   });
 
